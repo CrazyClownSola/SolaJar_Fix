@@ -102,13 +102,13 @@ public abstract class AConnection<Params, Input, Result, Target extends IListene
 	protected abstract Result doAnlyzing(Input request,
 			boolean isConnectAvailable);
 
-	/**
-	 * 对网络获取到的json或者xml文件进行解析 解析方式由自己定义
-	 * 
-	 * @param request
-	 * @return
-	 */
-	protected abstract Result doAnlyzing(Input request);
+//	/**
+//	 * 对网络获取到的json或者xml文件进行解析 解析方式由自己定义
+//	 * 
+//	 * @param request
+//	 * @return
+//	 */
+//	protected abstract Result doAnlyzing(Input request);
 
 	/**
 	 * 对解析后的数据进行处理的函数

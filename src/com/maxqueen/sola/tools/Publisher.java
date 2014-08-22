@@ -123,9 +123,10 @@ public class Publisher {
 		private Publisher _Publisher;
 
 		public P_Handler(WeakReference<Publisher> mTarget) {
+			super();
 			_Publisher = mTarget.get();
 		}
-
+		
 		@Override
 		public void handleMessage(Message msg) {
 			try {

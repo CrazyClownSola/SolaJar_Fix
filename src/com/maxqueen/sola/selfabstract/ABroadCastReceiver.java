@@ -52,6 +52,11 @@ public abstract class ABroadCastReceiver<Target extends IListener> extends
 			_Publisher.RegistePosCallBack((IListener) target.get());
 	}
 
+	public final void destoryReceiver() {
+		if (_Publisher != null)
+			_Publisher.cleanInstance();
+	}
+
 	@Override
 	public final void submitDataInteraction(int binaryValue, Object obj) {
 		try {
@@ -79,7 +84,7 @@ public abstract class ABroadCastReceiver<Target extends IListener> extends
 			Log.e("Error", e.getMessage());
 		}
 	}
-	
+
 	@Override
 	public void RegistePosCallBack(IListener _Listener) {
 		try {

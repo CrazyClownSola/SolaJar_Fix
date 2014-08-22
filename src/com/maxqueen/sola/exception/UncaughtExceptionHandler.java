@@ -24,7 +24,7 @@ import android.util.Log;
  * Title: UncaughtExceptionHandler
  * </p>
  * <p>
- * Description:
+ * Description:一个工具类，防程序Crash弹框的
  * </p>
  * <p>
  * Company: www.maxqueen.com

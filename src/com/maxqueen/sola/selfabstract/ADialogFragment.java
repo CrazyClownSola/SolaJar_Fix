@@ -15,7 +15,7 @@ import com.maxqueen.sola.interfaces.IListener;
 import com.maxqueen.sola.interfaces.IPublisher;
 import com.maxqueen.sola.tools.FG_T_Manage;
 import com.maxqueen.sola.tools.Publisher;
-import com.maxqueen.sola.tools.SelfManage_FG;
+import com.maxqueen.sola.tools.FragmentManagerTool;
 
 import android.app.Activity;
 import android.content.res.Resources;
@@ -151,7 +151,7 @@ public abstract class ADialogFragment extends DialogFragment implements
 
 	/**
 	 * 在Dialog调用前会使用该方法，用于初始化Dialog的一些界面信息;调用方
-	 * {@link SelfManage_FG#dialogShow(ADialogFragment, Object)}
+	 * {@link FragmentManagerTool#dialogShow(ADialogFragment, Object)}
 	 * 
 	 * @param initialData
 	 */

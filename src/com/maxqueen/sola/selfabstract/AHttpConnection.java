@@ -129,9 +129,16 @@ public abstract class AHttpConnection<Params, Result, Target extends IListener>
 
 	/**
 	 * 
-	 * <p>Title: HttpConnect</p>
-	 * <p>Description: </p>
-	 * <p>Company: www.maxqueen.com</p>
+	 * <p>
+	 * Title: HttpConnect
+	 * </p>
+	 * <p>
+	 * Description:
+	 * </p>
+	 * <p>
+	 * Company: www.maxqueen.com
+	 * </p>
+	 * 
 	 * @author Sola
 	 * @date 2014-8-5
 	 */
@@ -147,7 +154,7 @@ public abstract class AHttpConnection<Params, Result, Target extends IListener>
 
 		@Override
 		protected Result readBuffer(InputStream is) throws IOException {
-			return doAnlyzing(is);
+			return doAnlyzing(is, is != null);
 		}
 
 		@Override

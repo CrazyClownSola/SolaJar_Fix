@@ -123,11 +123,6 @@ public abstract class AWcfConnection<Params, Results, Target extends IListener>
 		onPostExecute(doAnlyzing(mConnect.getRequest(), isConnect));
 	}
 
-	@Override
-	protected Results doAnlyzing(String request) {
-		return null;
-	}
-
 	protected void ResetConnect(String method, String... args) {
 		mConnect = new WcfConnect(method, args);
 	}

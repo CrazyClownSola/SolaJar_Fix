@@ -48,8 +48,7 @@ public abstract class AService extends Service implements IListener, IPublisher 
 	 */
 	protected final WeakReference<AService> mContext;
 	/**
-	 * 发布者对象
-	 * (Ps: 该对象的私有化一直是我在纠结的一个问题)
+	 * 发布者对象 (Ps: 该对象的私有化一直是我在纠结的一个问题)
 	 */
 	private final Publisher _Publisher;
 
@@ -59,6 +58,15 @@ public abstract class AService extends Service implements IListener, IPublisher 
 		mName = this.getClass().getSimpleName();
 		_TManage = new FG_T_Manage();
 		_Publisher = new Publisher();
+	}
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		if (_Publisher != null)
+			_Publisher.cleanInstance();
+		if (_TManage != null)
+			_TManage.destoryTheWorld();
 	}
 
 	@Override
